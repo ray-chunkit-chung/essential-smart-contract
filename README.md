@@ -12,18 +12,25 @@ supply chain dapp on ethereum demo for beginners
  - Ganache lab
  - Truffle lab https://trufflesuite.com/truffle/
 
+
+Install Geth on Debian11 bullseye
+# https://gist.github.com/reisenmachtfreude/2f8be2f7a7584341539ae95909e95809
+
 ```
-sudo apt update
-sudo apt install nodejs npm  ## install node js
-sudo apt install software-properties-common  ## enable add-apt-repository
+apt upgrade
+echo "deb http://ppa.launchpad.net/ethereum/ethereum/ubuntu bionic main 
+deb-src http://ppa.launchpad.net/ethereum/ethereum/ubuntu bionic main" > /etc/apt/sources.list.d/ethereum-bioinc.list
+apt-key adv --keyserver keyserver.ubuntu.com  --recv-keys 2A518C819BE37D2C2031944D1C52189C923F6CA9
+apt-get update
+apt-get install ethereum
+geth --syncmode light  ## light node at 127.0.0.1:8551
+```
 
-sudo add-apt-repository ppa:longsleep/golang-backports
 
-# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys xxxx  
-# See https://ethereum.stackexchange.com/questions/92185/problem-installing-ethereum-via-apt-get-on-debian-buster
-
-sudo add-apt-repository -y ppa:ethereum/ethereum
-sudo npm install truffle -g
+Install truffle by npm
+```
+apt install nodejs npm
+npm install truffle -g
 ```
 
 
@@ -31,5 +38,5 @@ sudo npm install truffle -g
 
 
 
-Alternative
+Alternative testnet
 https://github.com/f-o-a-m/cliquebait
