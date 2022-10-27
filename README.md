@@ -15,8 +15,11 @@ supply chain dapp on ethereum demo for beginners
 ```
 sudo apt update
 sudo apt install nodejs npm  ## install node js
-sudo apt install software-properties-common  ## to use add-apt-repository
-# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys xxxx  ## you may need to add missing public key
+sudo apt install software-properties-common  ## enable add-apt-repository
+
+sudo add-apt-repository ppa:longsleep/golang-backports
+
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys xxxx  
 # See https://ethereum.stackexchange.com/questions/92185/problem-installing-ethereum-via-apt-get-on-debian-buster
 
 sudo add-apt-repository -y ppa:ethereum/ethereum
@@ -24,7 +27,7 @@ sudo npm install truffle -g
 ```
 
 
-sudo apt install software-properties-common
+
 
 
 
