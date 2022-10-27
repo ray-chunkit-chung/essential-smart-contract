@@ -20,22 +20,18 @@ Install Geth on Debian11 bullseye
 apt upgrade
 echo "deb http://ppa.launchpad.net/ethereum/ethereum/ubuntu bionic main 
 deb-src http://ppa.launchpad.net/ethereum/ethereum/ubuntu bionic main" > /etc/apt/sources.list.d/ethereum-bioinc.list
-apt-key adv --keyserver keyserver.ubuntu.com  --recv-keys 2A518C819BE37D2C2031944D1C52189C923F6CA9
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 2A518C819BE37D2C2031944D1C52189C923F6CA9
 apt-get update
 apt-get install ethereum
 geth --syncmode light  ## light node at 127.0.0.1:8551
 ```
 
-
-Install truffle by npm
+Install truffle and ganache by npm
 ```
 apt install nodejs npm
-npm install truffle -g
+npm install -g ganache
+npm install -g truffle
 ```
-
-
-
-
 
 
 Alternative testnet
