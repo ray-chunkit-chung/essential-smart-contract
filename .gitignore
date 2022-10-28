@@ -1,6 +1,7 @@
 # local
 local/
 bin/
+build/
 
 ### VisualStudioCode template
 .vscode/*

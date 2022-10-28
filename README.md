@@ -37,3 +37,12 @@ npm install -g truffle
 
 Alternative testnet
 https://github.com/f-o-a-m/cliquebait
+
+
+# Hello World
+```
+truffle deploy --reset
+HelloWorld.deployed().then(function(instance) { return instance });
+HelloWorld.deployed().then(function(instance) { return instance.getHelloMessage() });
+```
+
