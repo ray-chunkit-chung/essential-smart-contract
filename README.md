@@ -27,12 +27,13 @@ geth --syncmode light  ## light node at 127.0.0.1:8551
 ```
 
 Install truffle and ganache by npm
+https://www.npmjs.com/package/ganache-cli
+
 ```
 apt install nodejs npm
 npm install -g ganache
 npm install -g truffle
 ```
-
 
 Alternative testnet
 https://github.com/f-o-a-m/cliquebait
