@@ -1,3 +1,7 @@
+# local
+local/
+bin/
+
 ### VisualStudioCode template
 .vscode/*
 !.vscode/settings.json
