@@ -40,16 +40,27 @@ contract DataType {
         return helloMessagePrivate;
     }
 
-    function isDiscount(uint count) private pure returns (bool) {
-        uint count0 = 12;
+    function isDiscount(uint256 count) private pure returns (bool) {
+        uint256 count0 = 12;
         bool discount = false;
         if (count >= count0) discount = true;
         return discount;
 
-        // Control 
+        // Control
         // if else
         // while () {if () break};
         // for (i=0, i<10, i++) {;}
         // do {} while ();
+    }
+
+    function someFunc() private pure returns (bool) {
+        // check before invoking function
+        // require();
+        // undo all state changes. Return remaining gas
+        // revert();
+        // undo all state changes. Use up all gas
+        // assert();
+
+        return true;
     }
 }
