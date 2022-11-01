@@ -1,5 +1,10 @@
 {
   "dependencies": {
+    "dotenv": "^16.0.3",
     "solc": "^0.8.17"
+  },
+  "devDependencies": {
+    "truffle-plugin-hello": "^1.0.1",
+    "web3": "^1.8.0"
   }
 }
