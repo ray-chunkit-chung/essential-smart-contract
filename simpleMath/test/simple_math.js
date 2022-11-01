@@ -11,5 +11,3 @@ contract('SimpleMath', async accounts => {
     }
   })
 });
-
-
