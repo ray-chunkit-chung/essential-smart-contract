@@ -54,14 +54,14 @@ contract ERC20Token is ERC20Interface {
         address _to,
         uint256 _value
     ) public override returns (bool success) {
-        uint256 allowed_from_sender = allowed[_from][msg.sender];
+        uint256 spenderAllowance = allowed[_from][msg.sender];
         require(
-            balances[_from] >= _value && allowed_from_sender >= _value,
+            balances[_from] >= _value && spenderAllowance >= _value,
             "Insufficient allowed funds for transfer source."
         );
         balances[_to] += _value;
         balances[_from] -= _value;
-        if (allowed_from_sender < MAX_UINT256) {
+        if (spenderAllowance < MAX_UINT256) {
             allowed[_from][msg.sender] -= _value;
         }
         emit Transfer(_from, _to, _value);
@@ -78,7 +78,7 @@ contract ERC20Token is ERC20Interface {
         return balances[_owner];
     }
 
-    // Set
+    // msg.sender approve spender to transfer x tokens
     function approve(address _spender, uint256 _value)
         public
         override
@@ -89,7 +89,7 @@ contract ERC20Token is ERC20Interface {
         return true;
     }
 
-    // Return the
+    // Return how much owner approved spender to spend
     function allowance(address _owner, address _spender)
         public
         view
